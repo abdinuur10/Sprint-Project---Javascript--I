@@ -21,7 +21,13 @@ const zooAnimals = [
   
   */
   const displayNames = [];
+  zooAnimals.forEach(animal => {
+    displayNames.push(`${animal.displayNames} , ${animal.scientific_name}`)
+  })
+  
   console.log(displayNames);
+
+
   
   /* Request 2: .map()
   
@@ -29,24 +35,34 @@ const zooAnimals = [
   
   */
   
-  const lowCaseAnimalNames = [];
-  console.log(lowCaseAnimalNames);
+ const lowCaseAnimalNames = [];
+ zooAnimals.map(magacyo => {
+   lowCaseAnimalNames.push(magacyo.animal_name.toLowerCase())
+ });
+ 
+   console.log(lowCaseAnimalNames);
   
   /* Request 3: .filter() 
   
   The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
   
   */
-  const lowPopulationAnimals = [];
-  console.log(lowPopulationAnimals);
+  const lowPopulationAnimals = zooAnimals.filter(pop => {
+    return pop.population < 5;
+  });
+  
+    console.log(lowPopulationAnimals);
   
   /* Request 4: .reduce() 
   
   The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
   
   */
-  let populationTotal = 0;
-  console.log(populationTotal);
+ let populationTotal = {};
+ populationTotal = zooAnimals.reduce(function (accumulator, currentValue) {
+     return accumulator + currentValue.population;
+ },0)
+   console.log(populationTotal);
   
   
   // ==== Callbacks ====  
@@ -64,8 +80,28 @@ const zooAnimals = [
     * Create a function named multiply that returns the product of two numbers 
     * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
   */
-  
-  
+//  Create a function named add that returns the sum of two numbers
+
+function add (sax,sokar) {
+  return Sax + sokar
+}
+console.log(add(2, 2,)); 
+//  Create a function named multiply that returns the product of two numbers 
+
+ function multiplyNums(aniga, ayadha, cb) {
+  return cb(aniga * ayadha);
+}
+const five = 5;
+multiplyNums(five, five, (product) => console.log(`The product of ${five} and ${five} is ${product}.`));
+
+// Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
+
+function greeting(first, last) {
+  return `Hello ${first} ${last}, nice to meet you!`;
+};
+
+console.log(greeting("Mary", "Poppins", greeting));
+
   /* Step 3: Check your work by un-commenting the following calls to consume(): */
   // console.log(consume(2, 2, add)); // 4
   // console.log(consume(10, 16, multiply)); // 160
