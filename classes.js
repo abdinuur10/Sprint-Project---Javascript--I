@@ -18,7 +18,7 @@ function CuboidMaker(attributes) {
   
   CuboidMaker.prototype.surfaceArea = function () {
     return 2 * (this.length * this.width + this.length * this.height + this.width + this.height);
-    
+  }
   const cuboid = new CuboidMaker({
     length: 4,
     width: 5,
@@ -27,4 +27,17 @@ function CuboidMaker(attributes) {
                                
     console.log(cuboid.volume());
 
-
+    class CuboidMaker {
+        constructor(attributes) {
+            this.length = attributes.length
+            this.width = attributes.width;
+            this.height = attributes.height;
+  }
+    valume() {
+        return this.length * this.width * this.height;
+    }
+surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width + this.height);
+}
+    }
+    
