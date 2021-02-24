@@ -18,4 +18,5 @@ myFunction();
 
 // Explanation (Min 50 words): 
 
-
+// //It has a nested function which calls on the parent function, and the parent function is able to call on a global variable. 
+// nested function can acess the variable 'internal' because it can look the outside of it's own scope and then pass through the variables.

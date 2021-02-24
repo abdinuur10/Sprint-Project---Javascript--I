@@ -25,16 +25,25 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your group lead
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+    - forEach - loops through items in a object or array, in which it will not change the items inside, and calls them. Also it doesn't manipulate the original array. 
+    - .map- Map returns a new array by making a change to each item used the provided function, and also it doesn't manipulate the original array. 
 
 2. Explain the difference between a callback and a higher order function.
 
+
 3. What is closure?
+    - closure is used for inheritance. when nesting functions, child function can have access to the parent scope.
 
 4. Describe the four rules of the 'this' keyword.
+    - window/global - Globel scope, 'this' uses window object in the console 
+    - implicit- uses. Call, which will immediatlly invoke the function and pass the argument one by one.
+                      Apply- will immediatlly invoke the function, but it passes array as in an argument.
+                      Blind- it doesn't invoke the function immediatly, instead it reruns a brand new function that can be invoke later, and pass the argument one by one, 
 
 5. Why do we need super() in an extended class?
+    Supper- Gives parent class the attributes of a child class.
 
-### Task 1 - Project Set up
+### Task 1 - Project Set up 
 
 Follow these steps to set up and work on your project:
 Make sure you clone the branch that the TK links to: the next branch, NOT main!
