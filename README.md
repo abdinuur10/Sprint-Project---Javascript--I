@@ -43,7 +43,7 @@ Edit this document to include your answers after each question. Make sure to lea
 5. Why do we need super() in an extended class?
     Supper- Gives parent class the attributes of a child class.
 
-### Task 1 - Project Set up
+### Task 1 - Project Set up 
 
 Follow these steps to set up and work on your project:
 Make sure you clone the branch that the TK links to: the next branch, NOT main!
