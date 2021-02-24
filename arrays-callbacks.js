@@ -22,7 +22,7 @@ const zooAnimals = [
   */
   const displayNames = [];
   zooAnimals.forEach(animal => {
-    displayNames.push(`${animal.displayNames} , ${animal.scientific_name}`)
+    displayNames.push(`${animal.animal_name} , ${animal.scientific_name}`)
   })
   
   console.log(displayNames);
@@ -82,17 +82,29 @@ const zooAnimals = [
   */
 //  Create a function named add that returns the sum of two numbers
 
-function add (sax,sokar) {
-  return Sax + sokar
+function add (shaax, sokar) {
+  return shaax + sokar
 }
-console.log(add(2, 2,)); 
+
+add(2, 2)
+
+function calc(shaax, sokar, cb) {
+  return cb(shaax, sokar)
+}
+
+console.log(consume(2, 2, add)); 
+
 //  Create a function named multiply that returns the product of two numbers 
 
- function multiplyNums(aniga, ayadha, cb) {
-  return cb(aniga * ayadha);
+ function multiply(shaax, sokar) {
+   return shaax * sokar
+ }
+ multiply (10, 16)
+ 
+ function calc(shaax, sokar, cb) {
+  return cb(shaax, sokar)
 }
-const five = 5;
-multiplyNums(five, five, (product) => console.log(`The product of ${five} and ${five} is ${product}.`));
+console.log(consume(10, 16, multiply));
 
 // Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 
